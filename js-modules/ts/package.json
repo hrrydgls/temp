@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "type": "module"
+}

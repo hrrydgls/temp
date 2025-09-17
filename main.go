@@ -3,8 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
+
 	"github.com/hrrydgls/temp/echo"
 	"github.com/hrrydgls/temp/go_upload"
+	"github.com/hrrydgls/temp/goroutines"
 )
 
 type Book struct {
@@ -39,6 +41,8 @@ func main() {
 		echo.Index()
 	case "upload":
 		go_upload.Listen()
+	case "go":
+		goroutines.Go()
 	default:
 		goHere()
 	}

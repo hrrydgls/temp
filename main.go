@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/hrrydgls/temp/echo"
+	"github.com/hrrydgls/temp/go_channels"
 	"github.com/hrrydgls/temp/go_upload"
 	"github.com/hrrydgls/temp/goroutines"
 )
@@ -28,14 +29,6 @@ func main() {
 
 	flag.Parse()
 
-	// if *command == "echo" {
-	// 	echo.Index()
-	// } else if *command == "upload" {
-	// 	go_upload.Listen()
-	// } else {
-	// 	goHere()
-	// }
-
 	switch *command {
 	case "echo":
 		echo.Index()
@@ -43,6 +36,8 @@ func main() {
 		go_upload.Listen()
 	case "go":
 		goroutines.Go()
+	case "channel":
+		go_channels.ChannelRunner()
 	default:
 		goHere()
 	}

@@ -7,6 +7,7 @@ import (
 	"github.com/hrrydgls/temp/echo"
 	"github.com/hrrydgls/temp/go_channels"
 	"github.com/hrrydgls/temp/go_upload"
+	"github.com/hrrydgls/temp/godi"
 	"github.com/hrrydgls/temp/goroutines"
 )
 
@@ -38,6 +39,8 @@ func main() {
 		goroutines.Go()
 	case "channel":
 		go_channels.ChannelRunner()
+	case "di":
+		godi.Run()
 	default:
 		goHere()
 	}

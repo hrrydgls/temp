@@ -9,6 +9,6 @@ python3 -m auth.register
 You will get:
 
 ```txt
-connecting to database
+Connecting to database
 User registered successfully.
 ```

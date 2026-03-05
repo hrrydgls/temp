@@ -1,3 +1,3 @@
 
 def connect ():
-    print("connecting to database")
+    print("Connecting to database")

@@ -1,4 +1,4 @@
-# Temp files
+# My Mini Projects
 
 ## Go mini projects
 

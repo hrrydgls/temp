@@ -9,6 +9,8 @@ import (
 	"github.com/hrrydgls/temp/go_upload"
 	"github.com/hrrydgls/temp/godi"
 	"github.com/hrrydgls/temp/goroutines"
+	"github.com/hrrydgls/temp/go_pointers"
+	"github.com/hrrydgls/temp/go_vars"
 )
 
 type Book struct {
@@ -28,6 +30,8 @@ func main() {
 
 	command := flag.String("command", "", "The command you wanna run!")
 
+	option := flag.String("option", "", "Some commands need an option!")
+
 	flag.Parse()
 
 	switch *command {
@@ -41,6 +45,10 @@ func main() {
 		go_channels.ChannelRunner()
 	case "di":
 		godi.Run()
+	case "vars":
+		vars.Run(*option)
+	case "pointer":
+		pointer.Run()
 	default:
 		goHere()
 	}
@@ -48,6 +56,7 @@ func main() {
 }
 
 func goHere() {
+	fmt.Println("This is not a valid command but I suggest you to read this book:")
 	book := newBook("Learn Golang", "Harry")
 	fmt.Println(book.Describe())
 }
